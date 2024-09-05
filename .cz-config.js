@@ -11,11 +11,16 @@ module.exports = {
     { value: 'config', name: '🔧 config: Arquivos e scripts de configuração' },
     { value: 'test', name: '✅ test: Adição de testes ausentes ou correção de testes existentes' }
   ],
-  // Remover escopos
-  scopes: [], // Não utiliza scopos
-  allowCustomScopes: false, // Impede escopos personalizados
-  allowBreakingChanges: ['feat', 'fix'], // Tipos que podem incluir alterações quebradoras
-  subjectLimit: 100,
+  // Escopos padronizados disponíveis
+  scopes: [
+    { name: 'core', description: 'Alterações no núcleo do projeto' },
+    { name: 'api', description: 'Alterações relacionadas à API' },
+    { name: 'ui', description: 'Alterações na interface do usuário' },
+    { name: 'build', description: 'Alterações no processo de build' }
+  ],
+  allowCustomScopes: false, 
+  allowBreakingChanges: ['feat', 'fix'],
+  subjectLimit: 100, 
   breaklineNumber: 1000,
-  footerPrefix: 'ISSUES CLOSED:',
+  footerPrefix: 'ISSUES CLOSED:', 
 };
