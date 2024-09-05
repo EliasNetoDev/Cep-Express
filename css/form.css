@@ -49,7 +49,7 @@ body{
 
 .form-content input{
     display: block;
-    width: 50%;
+    width: 100%;
     border-radius: 8px;
     padding: 8px;
     border: 2px solid #dfdfdf;
@@ -58,7 +58,7 @@ body{
 .form button{
     background-color: #00c3ff;
     color: #fff;
-    width: 50%;
+    width: 100%;
     border-radius: 14px;
     padding: 10px;
     border: 0;
