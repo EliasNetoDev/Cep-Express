@@ -1,0 +1,20 @@
+{
+  "name": "cep-express",
+  "version": "1.0.0",
+  "description": "O CEP Express ajuda as pessoas a verificar CEPs da cidade de São Paulo que atendem a modalidade de envio de pedidos 'FLEX'. A JG Express fornece o serviço de entrega na região em que os CEPs atendem e entregam pedidos provenientes dos Marketplaces ou vendas por outro meios a entregarem os produtos no mesmo dia ou no dia seguinte a postagem.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cep",
+    "busca",
+    "api",
+    "verificar",
+    "cep",
+    "JG",
+    "Express"
+  ],
+  "author": "Elias Neto eliasrichneto@outlook.com",
+  "license": "MIT"
+}
