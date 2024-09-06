@@ -1,21 +1,34 @@
 document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault();
-    const cepInput = document.getElementById('cep').value;
-    if (validateCEP(cepInput)) {
-        checkCEPInCSV(cepInput);
-    } else {
-        alert('CEP inválido. Por favor, insira um CEP no formato 00000-000.');
+    let cepInput = document.getElementById('cep').value;
+
+    // Remove tudo que não é número para verificação
+    const cleanCEP = cepInput.replace(/\D/g, '');
+    
+    // Verifica se o CEP tem 8 dígitos
+    if (cleanCEP.length !== 8) {
+        alert('Por favor, insira um CEP com 8 dígitos.');
+        return;
     }
+
+    // Formata o CEP para exibição com hífen
+    cepInput = formatCEP(cepInput);
+    document.getElementById('cep').value = cepInput;
+
+    checkCEPInCSV(cepInput);
 });
 
-function validateCEP(cep) {
-    const regex = /^\d{5}-\d{3}$/;
-    return regex.test(cep);
+function formatCEP(cep) {
+    // Remove qualquer coisa que não seja número
+    const cleanCEP = cep.replace(/\D/g, '');
+    // Adiciona o hífen no CEP formatado
+    return cleanCEP.replace(/(\d{5})(\d{3})/, '$1-$2');
 }
 
 function checkCEPInCSV(cep) {
+    // Remove o hífen para a busca no CSV
     const formattedCEP = cep.replace('-', '');
-    
+
     fetch('../data/ceps.csv')
         .then(response => {
             if (!response.ok) {
@@ -39,10 +52,10 @@ function checkCEPInCSV(cep) {
             }
 
             if (cepFound) {
-                alert('Atende no FLEX!', cep);
+                alert('Atende no FLEX!');
                 // Adicionar lógica para quando o CEP for encontrado
             } else {
-                alert('Não atende no FLEX!', cep);
+                alert('Não atende no FLEX!');
                 // Adicionar lógica para quando o CEP não for encontrado
             }
         })
