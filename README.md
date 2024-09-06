@@ -9,7 +9,8 @@ Siga estas etapas para instalar e configurar o projeto:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/EliasNetoDev/Cep-Express.git```
+   git clone https://github.com/EliasNetoDev/Cep-Express.git
+   ```
 
 2. Navegue até o diretório do projeto:
     ```bash
@@ -22,7 +23,7 @@ Siga estas etapas para instalar e configurar o projeto:
 
 ## Uso
 
-Na home page do aplicativo, basta digitar o CEP que deseja consultar de acordo com a instrução do placeholder e clicar no botão "verificar", irá abrir um alert na tela com a mensagem: "Atende no FLEX" ou "Não atende no FLEX".
+Na home page do site, basta digitar o CEP que deseja consultar de acordo com a instrução do placeholder e clicar no botão "verificar", irá abrir um alert na tela com a mensagem: "Atende no FLEX" ou "Não atende no FLEX".
 
 ## Licença
 Este projeto está licenciado sob a [Licença MIT.](https://opensource.org/license/MIT)
